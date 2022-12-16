@@ -46,7 +46,7 @@ const GlobalStyle = createGlobalStyle`
 export const StyledContainer = styled.div`
   display: grid;
   height: 100vh;
-  grid-template-columns: minmax(22rem, 25vw) auto;
+  grid-template-columns: minmax(21rem, 13vw) auto;
   grid-template-rows: 9rem auto;
 
   ${media.mobile} {

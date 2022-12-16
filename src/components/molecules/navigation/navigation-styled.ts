@@ -102,7 +102,7 @@ export const StyledLogoutLink = styled(Link)`
     background-color: ${({ theme }) => theme.colors.darkGreen};
   }
   img {
-    margin-right: 1.5rem;
+    margin-right: 0.5rem;
   }
   button {
     border: 0;
