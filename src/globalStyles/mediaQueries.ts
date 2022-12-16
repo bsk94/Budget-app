@@ -6,5 +6,6 @@ const customMediaQueryMin = (minWidth: number) => `@media screen and (min-width:
 
 export const media = {
   desktop: customMediaQueryMin(600),
-  mobile: customMediaQueryMax(600)
+  mobile: customMediaQueryMax(600),
+  mobileS: customMediaQueryMax(330)
 };

@@ -3,12 +3,13 @@ import piggybank from '../../../assets/icons/piggy-bank.svg';
 import bgNav from '../../../assets/backgrounds/bg-abstract.png';
 import logout from '../../../assets/icons/logout-rounded.svg';
 import { Link } from 'react-router-dom';
+import { media } from '../../../globalStyles/mediaQueries';
 
 export const StyledHeaderIcon = styled.img.attrs({
   src: `${piggybank}`
 })``;
 
-export const StyledBg = styled.div`
+export const StyledBg = styled.header`
   background-image: url(${bgNav});
   grid-column: 1/-1;
   display: flex;
@@ -25,7 +26,7 @@ export const StyledNav = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  @media screen and (max-width: 600px) {
+  ${media.mobile} {
     grid-row: 3/4;
     display: flex;
     justify-content: center;
@@ -34,7 +35,7 @@ export const StyledNav = styled.nav`
 
 export const StyledList = styled.ul`
   padding-top: 7vh;
-  @media screen and (max-width: 600px) {
+  ${media.mobile} {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
@@ -73,7 +74,7 @@ export const StyledLinkMobile = styled(Link)`
   flex-direction: column;
   img {
     height: 5rem;
-    @media screen and (max-width: 330px) {
+    ${media.mobileS} {
       height: 4rem;
     }
   }
@@ -81,7 +82,7 @@ export const StyledLinkMobile = styled(Link)`
     color: ${({ theme }) => theme.colors.black};
     font-size: 2rem;
     margin-top: 0.2rem;
-    @media screen and (max-width: 330px) {
+    ${media.mobileS} {
       font-size: 1.5rem;
     }
   }
@@ -115,10 +116,11 @@ export const StyledLogoutIcon = styled.img.attrs({
 })``;
 
 export const StyledLogoutLinkMobile = styled(Link)`
+  background-color: ${({ theme }) => theme.colors.lightest};
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
-  margin: 2rem;
+  padding: 2rem;
   img {
     height: 3rem;
     margin-right: 0.5rem;

@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
     
     html { 
         font-size: 62.5%;
-         @media screen and (max-width: 600px){
+        ${media.mobile}{
         font-size: 50%;
         }
     } 
@@ -46,14 +46,14 @@ const GlobalStyle = createGlobalStyle`
 export const StyledContainer = styled.div`
   display: grid;
   height: 100vh;
-  grid-template-columns: 25rem auto;
+  grid-template-columns: minmax(22rem, 25vw) auto;
   grid-template-rows: 9rem auto;
 
   ${media.mobile} {
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 8vh auto 8vh;
+    grid-template-rows: 8rem auto 8.7rem;
   }
 `;
 
