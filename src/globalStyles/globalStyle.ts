@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import Electrolize from '../assets/fonts/Electrolize-Regular.ttf';
+import styled from 'styled-components';
+import { media } from './mediaQueries';
 
 const GlobalStyle = createGlobalStyle`
 
@@ -39,6 +41,20 @@ const GlobalStyle = createGlobalStyle`
     font-display: auto;
     }
 
+`;
+
+export const StyledContainer = styled.div`
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 25rem auto;
+  grid-template-rows: 9rem auto;
+
+  ${media.mobile} {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 8vh auto 8vh;
+  }
 `;
 
 export default GlobalStyle;
