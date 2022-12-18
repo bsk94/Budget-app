@@ -11,10 +11,11 @@ import {
   StyledLinkMobile,
   StyledLogoutIcon,
   StyledListItem
-} from './navigation-styled';
+} from './navigation-styles';
 import { Link } from 'react-router-dom';
 import { routes } from '../../../router/routes';
 import { useIsDesktop } from '../../../shared/hooks/isDesktop';
+import Button from '../../atoms/button';
 
 const Navbar = () => {
   const { pathname } = useLocation();
@@ -44,7 +45,7 @@ const Navbar = () => {
             </StyledList>
             <StyledLogoutLink to={routes.login}>
               <StyledLogoutIcon alt="log out icon" />
-              <button>Log out</button>
+              <Button>Log out</Button>
             </StyledLogoutLink>
           </StyledNav>
         </>
@@ -52,7 +53,7 @@ const Navbar = () => {
         <>
           <StyledLogoutLinkMobile to={routes.login}>
             <StyledLogoutIcon alt="log out icon" />
-            <button>Log out</button>
+            <Button>Log out</Button>
           </StyledLogoutLinkMobile>
           <StyledNav>
             <StyledList>
