@@ -1,7 +1,8 @@
 import React from 'react';
+import NotFound from '../../components/molecules/notFound';
 
 const NotFoundView = () => {
-  return <div>NotFoundView</div>;
+  return <NotFound />;
 };
 
 export default NotFoundView;
