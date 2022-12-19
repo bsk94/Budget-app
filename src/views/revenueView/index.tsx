@@ -1,7 +1,8 @@
 import React from 'react';
+import AddRevenue from '../../components/molecules/addRevenue';
 
 const RevenueView = () => {
-  return <div>RevenueView</div>;
+  return <AddRevenue />;
 };
 
 export default RevenueView;
