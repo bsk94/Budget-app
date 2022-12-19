@@ -4,7 +4,7 @@ import { StyledInput, StyledInputIcon, StyledContainer, StyledLabel } from './in
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   name: string;
   type: HTMLInputTypeAttribute;
-  value: string | number;
+  value: string;
   onChange: React.ChangeEventHandler<HTMLInputElement>;
   className?: string;
   isCalendarIcon?: boolean;
