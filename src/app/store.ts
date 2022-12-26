@@ -12,6 +12,9 @@ export const store = configureStore({
     getDefaultMiddleware({
       serializableCheck: false,
     }).concat(apiSlice.middleware),
+
+    finance: financeReducer
+  }
 });
 
 export type RootState = ReturnType<typeof store.getState>;
